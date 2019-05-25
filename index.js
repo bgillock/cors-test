@@ -6,7 +6,7 @@ const app = express();
 app.get('/return', (req, res) => {
     console.log('return called')
     var code = req.query.code
-    res.status(code).send('code='+code)
+    res.status(code).send('{"code": '+code+'}')
 });
 // Start the server
 const PORT = process.env.PORT || 8080;
